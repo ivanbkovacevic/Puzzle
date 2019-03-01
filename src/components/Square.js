@@ -1,5 +1,5 @@
 import React from 'react';
-import slika from '../assets/HubKujna.jpg'
+import slika from '../assets/mishuka.jpg'
 
 export default (props) => {
   return (

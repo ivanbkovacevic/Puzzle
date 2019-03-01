@@ -1,0 +1,64 @@
+
+.square{
+    height: 200px;
+    width: 200px;
+    margin: 1px;    
+    border-radius: 3%;
+    display: inline-block;
+    background-color: black;
+    overflow: hidden;
+
+    &-11{
+        margin-left: 0px;
+        height: 600px;
+        width: 600px;
+    }
+    &-12{
+        margin-left: -200px;
+        height: 600px;
+        width: 600px;
+    }
+    &-13{
+        margin-left: -400px;
+        height: 600px;
+        width: 600px;
+    }
+    &-21{
+        margin-left: 0px;
+        margin-top: -200px;
+        height: 600px;
+        width: 600px;
+    }
+    &-22{
+        margin-left: -200px;
+        margin-top: -200px;
+        height: 600px;
+        width: 600px;
+    }
+    &-23{
+        margin-left: -400px;
+        margin-top: -200px;
+        height: 600px;
+        width: 600px;
+    }
+    &-31{
+        margin-left: 0px;
+        margin-top: -400px;
+        height: 600px;
+        width: 600px;
+    }
+    &-32{
+        margin-left: -200px;
+        margin-top: -400px;
+        height: 600px;
+        width: 600px;
+    }
+
+
+    &-empty{
+       filter: brightness(0%);
+       border: none;
+       margin: 1px;
+         
+    }
+}

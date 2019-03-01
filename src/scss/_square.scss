@@ -1,7 +1,7 @@
 
 .square{
-    height: 200px;
-    width: 200px;
+    height: $square-size;
+    width: $square-size;
     margin: 1px;    
     border-radius: 3%;
     display: inline-block;
@@ -10,48 +10,48 @@
 
     &-11{
         margin-left: 0px;
-        height: 600px;
-        width: 600px;
+        height: $pickture-size;
+        width: $pickture-size;
     }
     &-12{
-        margin-left: -200px;
-        height: 600px;
-        width: 600px;
+        margin-left: -$square-size;;
+        height: $pickture-size;
+        width: $pickture-size;
     }
     &-13{
-        margin-left: -400px;
-        height: 600px;
-        width: 600px;
+        margin-left: -$square-size*2;
+        height: $pickture-size;
+        width: $pickture-size;
     }
     &-21{
         margin-left: 0px;
-        margin-top: -200px;
-        height: 600px;
-        width: 600px;
+        margin-top: -$square-size;;
+        height: $pickture-size;
+        width: $pickture-size;
     }
     &-22{
-        margin-left: -200px;
-        margin-top: -200px;
-        height: 600px;
-        width: 600px;
+        margin-left: -$square-size;;
+        margin-top: -$square-size;;
+        height: $pickture-size;
+        width: $pickture-size;
     }
     &-23{
-        margin-left: -400px;
-        margin-top: -200px;
-        height: 600px;
-        width: 600px;
+        margin-left: -$square-size*2;
+        margin-top: -$square-size;;
+        height: $pickture-size;
+        width: $pickture-size;
     }
     &-31{
         margin-left: 0px;
-        margin-top: -400px;
-        height: 600px;
-        width: 600px;
+        margin-top: -$square-size*2;
+        height: $pickture-size;
+        width: $pickture-size;
     }
     &-32{
-        margin-left: -200px;
-        margin-top: -400px;
-        height: 600px;
-        width: 600px;
+        margin-left: -$square-size;
+        margin-top: -$square-size*2;
+        height: $pickture-size;
+        width:$pickture-size;
     }
 
 

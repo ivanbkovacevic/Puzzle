@@ -36,8 +36,7 @@ class Container extends Component {
       this.setState({puzzle})
     }
 
-
-
+   
     onSquareClick=(i)=>{
         let {puzzle}=this.state;
         puzzle=[...puzzle];
@@ -63,6 +62,8 @@ class Container extends Component {
        
           this.setState({puzzle})
     }
+
+   
     
     render() {
         let squareMaped=this.state.puzzle.map((sq,i)=>{
@@ -72,9 +73,9 @@ class Container extends Component {
              class={sq.class}/>)
         })
         return (
-            <div >
-                {squareMaped}
-            </div>
+           <div>  {squareMaped}</div>
+              
+          
         );
     }
 }

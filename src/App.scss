@@ -4,10 +4,11 @@
 
 .main-container{
   display: flex;
- flex-direction: row;
- justify-content: space-around;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
  border-radius: 1%;
- padding-top: 100px; 
+
 }
 
 .app__container{
@@ -15,23 +16,31 @@
  flex-direction: row;
  flex-wrap: wrap;
  border-radius: 1%;
-  margin-left: 100px;
- 
- padding-left:2px;
- padding-top: 2px; 
-  height: 620px;
-  width: 610px;
+
+  height: $pickture-size+5px;
+  width: $pickture-size+5px;
   background-color: black;
   overflow: hidden;
-
 }
 
 .img-container{
-  height: 600px;
-  width: 600px;
-  border: 2px solid red;
+  max-height: $pickture-size;
+  max-width: $pickture-size;
+  margin-top: 20px;
+ 
 }
 .original-image{
-  height: 600px;
-  width: 600px;
+  border: 2px solid black;
+  max-height: $pickture-size;
+  max-width: $pickture-size;
+}
+
+.my-form{
+ display: block;
+ flex: 1;
+ align-self: center;
+  border: 2px solid green;
+  margin-bottom: 10px;
+  padding: 5px;
+ 
 }

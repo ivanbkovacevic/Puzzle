@@ -2,7 +2,8 @@
 .square{
     height: $square-size;
     width: $square-size;
-    margin: 1px;    
+    margin-left: 1px;  
+    margin-top: -3px;  
     border-radius: 3%;
     display: inline-block;
     background-color: black;
@@ -60,5 +61,21 @@
        border: none;
        margin: 1px;
          
+    }
+
+  
+}
+
+.show{
+    animation-name: showing;
+    animation-duration: 1s;
+}
+
+@keyframes showing{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
     }
 }

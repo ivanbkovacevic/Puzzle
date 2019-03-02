@@ -1,11 +1,18 @@
 import React from 'react';
-import slika from '../assets/mishuka.jpg'
 
-export default () => {
+
+export default (props) => {
+  let picture=props.myPicture;
+  let klassa;
+  
+  if(picture){
+    klassa="original-image show"
+  }else{
+    klassa="original-image"
+  }
   return (
     <div className="img-container">
-          <img className="original-image" src={slika} alt='mishuka'></img>
-
+          <img className={klassa} src={props.myPicture} alt=''></img>
     </div>
   )
 }

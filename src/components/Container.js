@@ -4,6 +4,7 @@ import Square from './Square';
 class Container extends Component {
     state={
         puzzle:[],
+        myPicture:null
     }
 
     componentDidMount() {
@@ -33,6 +34,7 @@ class Container extends Component {
       puzzle.pop()
       square={id:9, x:3, y:3, class:'square-empty'};
       puzzle.push(square);
+     
       this.setState({puzzle})
     }
 
@@ -62,15 +64,16 @@ class Container extends Component {
        
           this.setState({puzzle})
     }
-
-   
     
     render() {
+        console.log(this.state.myPicture)
         let squareMaped=this.state.puzzle.map((sq,i)=>{
             return(
             <Square onSquareClick={()=>this.onSquareClick(i)}
              x={sq.x} y={sq.y} 
-             class={sq.class}/>)
+             class={sq.class}
+             myPicture={this.props.myPicture}
+            />)
         })
         return (
            <div>  {squareMaped}</div>

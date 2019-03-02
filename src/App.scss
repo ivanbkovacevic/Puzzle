@@ -24,15 +24,15 @@
 }
 
 .img-container{
-  max-height: $pickture-size;
-  max-width: $pickture-size;
+  height: $pickture-size;
+  width: $pickture-size;
   margin-top: 20px;
  
 }
 .original-image{
   border: 2px solid black;
-  max-height: $pickture-size;
-  max-width: $pickture-size;
+  height: $pickture-size;
+  width: $pickture-size;
 }
 
 .my-form{

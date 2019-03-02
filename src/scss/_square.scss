@@ -2,10 +2,11 @@
 .square{
     height: $square-size;
     width: $square-size;
-    margin-left: 1px;  
-    margin-top: -3px;  
+    margin-left: 3px; 
+   
+    margin-top: 3px;  
     border-radius: 3%;
-    display: inline-block;
+    
     background-color: black;
     overflow: hidden;
 
@@ -57,14 +58,15 @@
 
 
     &-empty{
-       filter: brightness(0%);
+       filter: brightness(50%);
        border: none;
        margin: 1px;
          
     }
 
-  
+
 }
+
 
 .show{
     animation-name: showing;

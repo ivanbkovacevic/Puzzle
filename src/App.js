@@ -28,9 +28,9 @@ handleChange=(event)=> {
                         placeholder="Paste the image URL address" size="35" name="myPicture"></input>
                 </form>
                 </div>
-                <div className="app__container">   
+              
                 <Container myPicture={this.state.myPicture}/>
-                </div>
+               
           <OriginalImage myPicture={this.state.myPicture}/>     
       </div>
      

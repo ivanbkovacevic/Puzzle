@@ -1,6 +1,7 @@
 @import './scss/variables';
 @import './scss/basics';
 @import './scss/square';
+@import './scss/container-square';
 
 .main-container{
   display: flex;
@@ -12,16 +13,13 @@
 
 }
 
-.app__container{
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
+.app-container{
+position: relative;
  border-radius: 1%;
-
   height: $pickture-size+5px;
   width: $pickture-size+5px;
   background-color: black;
-  overflow: hidden;
+  
 }
 
 .img-container{

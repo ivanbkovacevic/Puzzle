@@ -11,9 +11,17 @@ export default (props) => {
     klassa="square"
   }
   console.log(picture);
+
+  let move = {
+    transform:`translate(${props.classMove.x}px,${props.classMove.y}px)`,
+   
+   };
   return (
-            <div className={klassa} onClick={props.onSquareClick}>    
+            <div style={move} className={`${props.classContainer} ${klassa}`} 
+                 onClick={props.onSquareClick}>    
                <img className={props.class} src={picture} alt=''></img>
                 </div>
   )
 }
+
+

@@ -5,7 +5,7 @@ import OriginalImage from './components/OriginalImage'
 
 class App extends Component {
 state={
-  myPicture:null
+  myPicture:"http://labelme.csail.mit.edu/Release3.0/Images/users/lito/whatever/birsd.jpg"
 }
 
 handleChange=(event)=> {
@@ -25,7 +25,7 @@ handleChange=(event)=> {
              <div className="my-form">
                 <form  onSubmit={this.handleSubmit}>
                         Paste image URL: <input onChange={this.handleChange} type="text"  
-                        placeholder="Paste the image URL address" name="myPicture"></input>
+                        placeholder="Paste the image URL address" size="35" name="myPicture"></input>
                 </form>
                 </div>
                 <div className="app__container">   

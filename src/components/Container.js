@@ -33,7 +33,7 @@ class Container extends Component {
             square={id:i,x:k,y:i,class:classArr[indx],
             classContainer:classContainerArr[indx],
             classMove:{x:0,y:0},
-            empty:false
+            empty:{x:k,y:i}
         };
             puzzle.push(square);    
             indx++;
@@ -44,7 +44,7 @@ class Container extends Component {
       square={id:9, x:3, y:3, class:'square-empty',
       classContainer:'container-square-empty',
       classMove:{x:0,y:0},
-      empty:true
+      empty:{x:null,y:null}
     };
       puzzle.push(square);
      
@@ -56,55 +56,62 @@ class Container extends Component {
         puzzle=[...puzzle];
         let emptySquare;
         let squareClicked=puzzle[i];
+        let rez;
      
         for(let i in puzzle){
             if(puzzle[i].x===emptyPoz.x && puzzle[i].y===emptyPoz.y ){  
-                emptySquare=puzzle[i];
-                emptySquare.empty=true;
-                     
+                emptySquare=puzzle[i];//looking for empty square
+                 
                 if(Math.abs((squareClicked.x - emptySquare.x))===1 && squareClicked.y === emptySquare.y){
-             
-                    if(emptySquare.x-squareClicked.x===1){
-                        puzzle[i].classMove.x=133;
-                        emptySquare.classMove.x=-133;
-                        puzzle[i].x=puzzle[i].x+1;
-                        emptySquare.x=emptySquare.x-1;   
-                        emptyPoz.x=emptyPoz.x-1;             
+                //  moving on X axis
+                 rez= emptySquare.x-squareClicked.x;
+                    if(emptySquare.x-squareClicked.x===1){//checking is it moving right
+                        squareClicked.classMove.x+=133;
+                        emptySquare.classMove.x-=133;
+                        squareClicked.x++;
+                        emptySquare.x--;  
+                        emptyPoz.x--;   
+                        this.setState({puzzle,emptyPoz})         
                      } 
-                      if(emptySquare.x-squareClicked.x===-1){
-                        puzzle[i].classMove.x=-133;
-                        emptySquare.classMove.x=133;
-                        puzzle[i].x=puzzle[i].x-1;
-                        emptySquare.x= emptySquare.x+1;
-                        emptyPoz.x=emptyPoz.x+1;
-                    }
+                     else if(emptySquare.x-squareClicked.x===-1){//checking is it moving left
+                        squareClicked.classMove.x-=133;
+                        emptySquare.classMove.x+=133;
+                        squareClicked.x--;
+                        emptySquare.x++;  
+                        emptyPoz.x++; 
+                        this.setState({puzzle,emptyPoz})             
+                     }
+                     
                 }
                 if(Math.abs((squareClicked.y - emptySquare.y))===1 && squareClicked.x === emptySquare.x){
-                
-                    if(emptySquare.y-squareClicked.y===1){
-                        puzzle[i].classMove.y=133;
-                        emptySquare.classMove.y=-133;
-                        puzzle[i].y=puzzle[i].y-1;
-                        emptySquare.y=emptySquare.y+1;
-                        emptyPoz.y=emptyPoz.y+1;
-                        
-                     }  if(emptySquare.y-squareClicked.y===-1){
-                        puzzle[i].classMove.y=-133;
-                        emptySquare.classMove.y=133;
-                        puzzle[i].y=puzzle[i].y+1;
-                        emptySquare.y=emptySquare.y-1;  
-                        emptyPoz.y=emptyPoz.y-1;     
-                    }
+                 //moving on Y axis
+                 if(emptySquare.y-squareClicked.y===1){//checking is it moving up
+                    squareClicked.classMove.y+=133;
+                    emptySquare.classMove.y-=133;
+                    squareClicked.y++;
+                    emptySquare.y--;  
+                    emptyPoz.y--;   
+                    this.setState({puzzle,emptyPoz})         
+                 } 
+                 else if(emptySquare.y-squareClicked.y===-1){//checking is it moving down
+                    squareClicked.classMove.y-=133;
+                    emptySquare.classMove.y+=133;
+                    squareClicked.y--;
+                    emptySquare.y++;  
+                    emptyPoz.y++; 
+                    this.setState({puzzle,emptyPoz})             
+                 }
                 }
             } 
         }
-        console.log(emptySquare)
+      
        
           this.setState({puzzle,emptyPoz})
+          console.log(emptySquare,emptyPoz,squareClicked,rez)
     }
     
     render() {
-        console.log(this.state.myPicture)
+   
         let squareMaped=this.state.puzzle.map((sq,i)=>{
             return(
             <Square onSquareClick={()=>this.onSquareClick(i)}
@@ -119,9 +126,6 @@ class Container extends Component {
             <div className="app-container">   
               {squareMaped}
            </div>
-          
-              
-          
         );
     }
 }

@@ -6,43 +6,51 @@
       left:0;
      
       position: absolute;
+      z-index: 9;
     }
     &-12{
         top: 0;
         left:$square-size;
   
         position: absolute;
+        z-index: 9;
     }
     &-13{
         top: 0;
         left:$square-size*2;
         position: absolute;
+        z-index: 9;
     }
     &-21{
         top: $square-size;
         left:0;
    
         position: absolute;
+        z-index: 9;
     }
     &-22{
         top: $square-size;
         left:$square-size;
         position: absolute;
+        z-index: 9;
     }
     &-23{
         top: $square-size;
         left:$square-size*2;
         position: absolute;
+        z-index: 9;
     }
     &-31{
         top: $square-size*2;
         left:0;
              position: absolute;
+             z-index: 9;
     }
     &-32{
         top: $square-size*2;
         left:$square-size;
         position: absolute;
+        z-index: 9;
     }
 
 
@@ -50,63 +58,6 @@
         top: $square-size*2;
         left:$square-size*2;
         position: absolute;
-    }
-}
-
-.moveRight{
-   animation-name: moveR;
-   animation-duration: 0.3s;
-   animation-fill-mode: forwards;
-}
-.moveLeft{
-    animation-name: moveL;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-}
-
-.moveUp{
-    animation-name: moveU;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
- }
- .moveDown{
-     animation-name: moveD;
-     animation-duration: 0.3s;
-     animation-fill-mode: forwards;
- }
-
-@keyframes moveR{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(100%);
-    }
-}
-
-@keyframes moveL{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes moveU{
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(100%);
-    }
-}
-
-@keyframes moveD{
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(-100%);
+        z-index: 1;
     }
 }

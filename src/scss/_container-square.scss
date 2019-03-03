@@ -4,27 +4,33 @@
     &-11{
       top: 0;
       left:0;
-     
+      outline: 1px;
+      border-radius: 6%;
+   border:1px solid black;
       position: absolute;
       z-index: 9;
     }
     &-12{
         top: 0;
         left:$square-size;
-  
+        border-radius: 6%;
         position: absolute;
+        border:1px solid black;
         z-index: 9;
     }
     &-13{
         top: 0;
         left:$square-size*2;
         position: absolute;
+        border:1px solid black;
+        border-radius: 6%;
         z-index: 9;
     }
     &-21{
         top: $square-size;
         left:0;
-   
+        border-radius: 6%;
+        border:1px solid black;
         position: absolute;
         z-index: 9;
     }
@@ -32,24 +38,32 @@
         top: $square-size;
         left:$square-size;
         position: absolute;
+        border-radius: 6%;
+        border:1px solid black;
         z-index: 9;
     }
     &-23{
         top: $square-size;
         left:$square-size*2;
         position: absolute;
+        border-radius: 6%;
+        border:1px solid black;
         z-index: 9;
     }
     &-31{
         top: $square-size*2;
         left:0;
              position: absolute;
+             border-radius: 6%;
+             border:1px solid black;
              z-index: 9;
     }
     &-32{
         top: $square-size*2;
         left:$square-size;
         position: absolute;
+        border-radius: 6%;
+        border:1px solid black;
         z-index: 9;
     }
 
@@ -58,6 +72,8 @@
         top: $square-size*2;
         left:$square-size*2;
         position: absolute;
+        border-radius: 6%;
+        border:1px solid black;
         z-index: 1;
     }
 }

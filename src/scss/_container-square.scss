@@ -77,3 +77,20 @@
         z-index: 1;
     }
 }
+
+.win{
+ mix-blend-mode: lighten;
+ animation: winAnim 1s linear infinite;
+}
+
+@keyframes winAnim{
+      0%{
+      opacity: 0.5;
+      }
+      50%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 0.5;
+      }
+}

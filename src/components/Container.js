@@ -163,7 +163,7 @@ class Container extends Component {
         return (
             <div className="app-container">   
               {squareMaped}
-              <audio ref={"myAudio"}><source src={audio} type="audio/mp3"></source></audio>   
+              <audio ref={"myAudio"} src={audio} ></audio>   
            </div>
         );
     }

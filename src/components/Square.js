@@ -12,7 +12,7 @@ export default (props) => {
     klassa="square"
   }
 
-   gameStatusCSS= gameStatus ? 'win' : null;
+   gameStatusCSS= gameStatus.gs ? 'win' : null;
 
   let move = {
     transition:'all 0.5s',

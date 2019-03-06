@@ -8,30 +8,35 @@ class Container extends Component {
         puzzle:[],
         myPicture:null,
         emptyPoz:{x:3,y:3},
+        gameStatus:{
+            gameStatusCounter:0,
+            gs:false
+        }
+          
         
     }
 
     componentDidMount() {
       let {puzzle}=this.state;
       puzzle=[...puzzle];
-      
+      console.log('Willmount')
       let classArr=[];
       let classContainerArr=[];
-      let classArrResorted=[];
-      let classContainerArrTrimed=[];
+      let classArrTrimed=[];
+    
       let square={};
       let clas;
       let clasContainer;
 
       for(let i=1; i<4;i++){
         for(let k=1; k<4; k++){
-            clas=`square-${i}${k}`;
+            clas=`square-${i}${k}`;//creating class for images
             classArr.push(clas);
-            clasContainer=`container-square-${i}${k}`;
+            clasContainer=`container-square-${i}${k}`;//creating class for container divs images
             classContainerArr.push(clasContainer);
         }}
         classArr.pop();
-        classArr.sort(()=>Math.random()-0.5);
+         classArr.sort(()=>Math.random()-0.5); //shufleing the array of images
      
         let indx=0;
 
@@ -57,25 +62,24 @@ class Container extends Component {
     };
       puzzle.push(square);
 
-      for(let i in classArr){
-          let temp= classArr[i].slice(7,9);      
-        classArrResorted.push(temp);
-        classArrResorted.sort();
-      }
-      classArrResorted.push('33');
+      for(let i in puzzle){ // CHECKING IS IT SOLVED
+        let temp= puzzle[i].class.slice(7,9);      
+      classArrTrimed.push(temp);
+    }
+    classArrTrimed.pop();
+    classArrTrimed.push('33');
 
-      for(let i in classContainerArr){
-          let temp= classContainerArr[i].slice(17,19);      
-          classContainerArrTrimed.push(temp);
-          classContainerArrTrimed.sort();
-      }
-  
-      this.setState({puzzle,classArr,classContainerArrTrimed,classArrResorted})
+ 
+
+      this.setState({puzzle,classArr,classArrTrimed});
     }
 
+
     onSquareClick=(i)=>{
-        let {puzzle,emptyPoz,classContainerArrTrimed,classArrResorted}=this.state;
+        let {puzzle,emptyPoz,classArrTrimed}=this.state;
         puzzle=[...puzzle];
+     
+        classArrTrimed=[...classArrTrimed]
         let emptySquare;
         let squareClicked=puzzle[i];
         let gameStatus;
@@ -136,15 +140,19 @@ class Container extends Component {
                     PlayAudio(myAudio);
                 }
 
-              gameStatus=GameWin(classContainerArrTrimed,classArrResorted);//checking is it all solved
-           
-             console.log(gameStatus);
-
+                let pozContainerArr=[];
+                for(let i in puzzle){
+                    let temp= `${puzzle[i].y}${puzzle[i].x}`;
+                    pozContainerArr.push(temp);
+                }
+                gameStatus=GameWin(pozContainerArr,classArrTrimed);//checking is it all solved 
+                console.log(gameStatus);
+                this.setState({puzzle,gameStatus,pozContainerArr,classArrTrimed});
         }
-    
-          this.setState({puzzle,emptyPoz,gameStatus})
-          console.log(emptySquare,emptyPoz,squareClicked)
     }
+
+
+    
     
     render() {
    

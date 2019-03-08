@@ -14,7 +14,6 @@ export function PlayAudio(myAudio) {
        }
     }
     gameStatus.gs= gameStatus.gameStatusCounter===9 ? true : false;
- 
    return gameStatus
-
   }
+

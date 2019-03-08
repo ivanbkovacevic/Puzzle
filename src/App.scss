@@ -3,6 +3,10 @@
 @import './scss/square';
 @import './scss/container-square';
 
+input{
+  margin:5px;
+}
+
 .main-container{
   display: flex;
 

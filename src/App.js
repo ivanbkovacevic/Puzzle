@@ -3,12 +3,14 @@ import './App.scss';
 import Container from './components/Container'
 import { CropImage} from './components/Utility'
 import OriginalImage from './components/OriginalImage'
+import startImage from './birds.jpg'
 
 class App extends Component {
 state={
-  myPicture:"http://labelme.csail.mit.edu/Release3.0/Images/users/lito/whatever/birsd.jpg",
+  myPicture:startImage
 
 }
+
 
 onSelectFile = (e) => {
   if (e.target.files && e.target.files.length > 0) {
@@ -26,6 +28,7 @@ onSelectURL=(e)=>{
 }
 
   render() {
+   
     return (
       <div className="main-container">
              <div className="my-form">
@@ -36,6 +39,7 @@ onSelectURL=(e)=>{
               </div>
                 <Container myPicture={this.state.myPicture}/>   
                <OriginalImage myPicture={this.state.myPicture}/>    
+              
       </div>
     );
   }

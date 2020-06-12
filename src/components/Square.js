@@ -13,7 +13,7 @@ export default (props) => {
   console.log(picture);
 
   let move = {
-    transition:'all 0.5s',
+    transition:'transform 1s ease',
     transform:`translate(${props.classMove.x}px,${props.classMove.y}px)`,
    
    };

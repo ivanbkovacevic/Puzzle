@@ -1,39 +1,46 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Container from './components/Container'
+import { CropImage} from './components/Utility'
 import OriginalImage from './components/OriginalImage'
+import startImage from './birds.jpg'
 
 class App extends Component {
 state={
-  myPicture:"http://labelme.csail.mit.edu/Release3.0/Images/users/lito/whatever/birsd.jpg"
+  myPicture:startImage
+
 }
 
-handleChange=(event)=> {
-  const name = event.target.name;
- this.setState({[name]:event.target.value});
- 
-}
-  handleSubmit=(event)=> {
-    event.preventDefault();
-  
-    console.log(this.state.myPicture)
-  
+
+onSelectFile = (e) => {
+  if (e.target.files && e.target.files.length > 0) {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      this.setState({ myPicture: reader.result });
+    });
+    reader.readAsDataURL(e.target.files[0]);
   }
+}
+
+onSelectURL=(e)=>{
+  console.log(e.target.value)
+  this.setState({myPicture:e.target.value});
+}
+
   render() {
+   
     return (
       <div className="main-container">
              <div className="my-form">
-                <form  onSubmit={this.handleSubmit}>
-                        Paste image URL: <input onChange={this.handleChange} type="text"  
-                        placeholder="Paste the image URL address" size="35" name="myPicture"></input>
-                </form>
-                </div>
+             <input type="file" onChange={this.onSelectFile} />
+           
+              <input onChange={this.onSelectURL} type="text"  
+                        placeholder="OR paste the image URL address" size="30" name="myPicture"></input>
+              </div>
+                <Container myPicture={this.state.myPicture}/>   
+               <OriginalImage myPicture={this.state.myPicture}/>    
               
-                <Container myPicture={this.state.myPicture}/>
-               
-          <OriginalImage myPicture={this.state.myPicture}/>     
       </div>
-     
     );
   }
 }

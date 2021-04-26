@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/Puzzle/static/media/kerber.8f980984.png"
   },
   {
-    "revision": "94d6bf6a83c75ef36444e597192508c5",
+    "revision": "1f81ca4579c15abb396479a1a838bf51",
     "url": "/Puzzle/index.html"
   }
 ];

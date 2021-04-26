@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Puzzle/precache-manifest.4240f4642e7af826568ba5dce341de38.js"
+  "/Puzzle/precache-manifest.e1af1e1c26773d142c9414650b015f74.js"
 );
 
 workbox.clientsClaim();
@@ -30,5 +30,5 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute("/Puzzle/index.html", {
   
-  blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
+  blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });

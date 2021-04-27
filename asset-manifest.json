@@ -1,15 +1,16 @@
 {
-  "main.css": "/Puzzle/static/css/main.ae5b9a95.chunk.css",
-  "main.js": "/Puzzle/static/js/main.f7e7eb19.chunk.js",
-  "main.js.map": "/Puzzle/static/js/main.f7e7eb19.chunk.js.map",
+  "main.css": "/Puzzle/static/css/main.972609aa.chunk.css",
+  "main.js": "/Puzzle/static/js/main.568cbf19.chunk.js",
+  "main.js.map": "/Puzzle/static/js/main.568cbf19.chunk.js.map",
   "runtime~main.js": "/Puzzle/static/js/runtime~main.8df21f5e.js",
   "runtime~main.js.map": "/Puzzle/static/js/runtime~main.8df21f5e.js.map",
-  "static/js/2.d17a8631.chunk.js": "/Puzzle/static/js/2.d17a8631.chunk.js",
-  "static/js/2.d17a8631.chunk.js.map": "/Puzzle/static/js/2.d17a8631.chunk.js.map",
+  "static/js/2.fd307fec.chunk.js": "/Puzzle/static/js/2.fd307fec.chunk.js",
+  "static/js/2.fd307fec.chunk.js.map": "/Puzzle/static/js/2.fd307fec.chunk.js.map",
   "index.html": "/Puzzle/index.html",
-  "precache-manifest.39436de8226d180cd1fb455c37834ffa.js": "/Puzzle/precache-manifest.39436de8226d180cd1fb455c37834ffa.js",
+  "precache-manifest.39c4e2aac2d45cd886eb9f59eb80d8bb.js": "/Puzzle/precache-manifest.39c4e2aac2d45cd886eb9f59eb80d8bb.js",
   "service-worker.js": "/Puzzle/service-worker.js",
-  "static/css/main.ae5b9a95.chunk.css.map": "/Puzzle/static/css/main.ae5b9a95.chunk.css.map",
+  "static/css/main.972609aa.chunk.css.map": "/Puzzle/static/css/main.972609aa.chunk.css.map",
   "static/media/SlidingCroped.mp3": "/Puzzle/static/media/SlidingCroped.8d3a9594.mp3",
-  "static/media/kerber.png": "/Puzzle/static/media/kerber.8f980984.png"
+  "static/media/kerber.png": "/Puzzle/static/media/kerber.8f980984.png",
+  "static/media/logo-kerber.png": "/Puzzle/static/media/logo-kerber.90c6f279.png"
 }

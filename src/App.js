@@ -4,6 +4,7 @@ import Container from './components/Container'
 import { CropImage} from './components/Utility'
 import OriginalImage from './components/OriginalImage'
 import startImage from './kerber.png'
+import logoKerber from './logo-kerber.png'
 
 class App extends Component {
 state={
@@ -31,6 +32,10 @@ state={
    
     return (
       <div className="wraper">
+         <div className="div-logo-kerber">
+          <img className="img-logo-kerber" src={logoKerber} alt=''></img>
+    </div>
+    <a className="headline" target="_blank" href="https://www.facebook.com/KerberGames" alt=" ">Kerber Games</a>
       <div className="main-container">
              {/* <div className="my-form">
              <input type="file" onChange={this.onSelectFile} />
